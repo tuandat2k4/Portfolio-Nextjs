@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "./context/ThemeContext";
 
 // Font chính cho body
 const inter = Inter({
@@ -35,9 +36,11 @@ export default function RootLayout({
       <body
         className={`bg-white transition-colors dark:bg-gray-900 dark:text-white ${inter.variable} ${robotoMono.variable}`}
       >
-        <Navbar />
-        <main className="min-h-screen pt-24">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <main className="min-h-screen pt-24">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -8,11 +8,13 @@ import {
 } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
+  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const pathname = usePathname();
-  const theme = "dark";
+  const { theme, toggleTheme } = useTheme();
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -49,7 +51,7 @@ const Navbar = () => {
               );
             })}
 
-            <button className="p-2 rounded-lg text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer">
+            <button onClick={toggleTheme} className="p-2 rounded-lg text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer">
               {theme === "dark" ? (
                 <SunIcon className="h-5 w-5" />
               ) : (
@@ -89,7 +91,7 @@ const Navbar = () => {
                   </Link>
                 );
               })}
-              <button className="p-2 rounded-lg text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer">
+              <button onClick={toggleTheme} className="p-2 rounded-lg text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer">
                 {theme === "dark" ? (
                   <>
                     <SunIcon className="h-5 w-5" />
