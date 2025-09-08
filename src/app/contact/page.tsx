@@ -40,9 +40,9 @@ export default function Contact() {
   }
 
   const contactItems = [
-    { icon: <FaEnvelope className="h-6 w-6 text-primary" />, title: "Email", value: "your.email@example.com", href: "mailto:your.email@example.com" },
-    { icon: <FaPhone className="h-6 w-6 text-primary" />, title: "Phone", value: "+1 (234) 567-890", href: "tel:+1234567890" },
-    { icon: <FaMapMarkerAlt className="h-6 w-6 text-primary" />, title: "Location", value: "San Francisco, CA" }
+    { icon: <FaEnvelope className="h-6 w-6 text-primary" />, title: "Email", value: "tdat96386@gmail.com", href: "mailto:tdat96386@gmail.com" },
+    { icon: <FaPhone className="h-6 w-6 text-primary" />, title: "Phone", value: "0942417773", href: "tel:0942417773" },
+    { icon: <FaMapMarkerAlt className="h-6 w-6 text-primary" />, title: "Location", value: "Ho Chi Minh City" }
   ]
 
   return (
@@ -58,7 +58,7 @@ export default function Contact() {
           <motion.div {...fadeInUp}>
             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
             <p className="text-secondary">
-              I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+              Looking forward to opportunities where I can learn, grow, and make an impact
             </p>
           </motion.div>
 

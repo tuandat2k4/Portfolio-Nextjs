@@ -11,7 +11,7 @@ import {
   fadeIn,
 } from "@/utils/animations";
 
-export default function Projects() {
+const page = () => {
   return (
     <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
@@ -66,19 +66,25 @@ export default function Projects() {
 
               {/* Technologies */}
               <motion.div
-                className="flex flex-wrap gap-2 mb-4"
+                className="flex flex-wrap gap-2 mb-4 items-center"
                 {...fadeIn}
                 transition={{ delay: 0.3 }}
               >
                 {project.technologies.map((tech) => (
-                  <motion.span
-                    key={tech}
-                    className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                  <motion.div
+                    key={tech.name}
+                    className="flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    {tech}
-                  </motion.span>
+                    <Image
+                      src={tech.icon}
+                      alt={tech.name}
+                      width={30}
+                      height={30}
+                      className="h-5 w-5"
+                    />
+                  </motion.div>
                 ))}
               </motion.div>
 
@@ -118,4 +124,6 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+};
+
+export default page;

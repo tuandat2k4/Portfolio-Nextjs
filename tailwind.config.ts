@@ -3,10 +3,10 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   darkMode: "class",
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     screens: {
@@ -16,10 +16,7 @@ const config: Config = {
     },
     container: {
       center: true,
-      padding: {
-        DEFAULT: "1rem",
-        md: "2rem",
-      },
+      padding: { DEFAULT: "1rem", md: "2rem" },
     },
     extend: {
       colors: {
@@ -31,13 +28,10 @@ const config: Config = {
         bg: "#ffffff",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["var(--font-roboto)", "sans-serif"], // <-- THAY FONT
       },
       keyframes: {
-        fadeIn: {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
+        fadeIn: { from: { opacity: "0" }, to: { opacity: "1" } },
         slideUp: {
           from: { transform: "translateY(20px)", opacity: "0" },
           to: { transform: "translateY(0)", opacity: "1" },
