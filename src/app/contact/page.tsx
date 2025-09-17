@@ -48,8 +48,9 @@ export default function Contact() {
   return (
     <div className="container max-w-7xl mx-auto py-12">
       {/* Title */}
-      <motion.h1 className="text-4xl font-bold mb-8 text-center" {...fadeInUp}>
+      <motion.h1 className="text-4xl text-primary font-bold mb-8 text-center" {...fadeInUp}>
         Contact Me
+        <div className="w-24 h-1 bg-primary mx-auto mt-3"></div>
       </motion.h1>
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-12" {...staggerContainer}>

@@ -19,6 +19,9 @@ const config: Config = {
       padding: { DEFAULT: "1rem", md: "2rem" },
     },
     extend: {
+      boxShadow: {
+        'primary': '0 0 20px 1px rgba(0, 122, 255, 0.3)',
+      }, 
       colors: {
         primary: "#007AFF",
         secondary: "#6B7280",

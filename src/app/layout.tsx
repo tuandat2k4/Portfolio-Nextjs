@@ -13,7 +13,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Devfolio is a portfolio website for developers to showcase their projects and skills.",
+  description: "Portfolio",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

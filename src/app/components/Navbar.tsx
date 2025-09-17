@@ -14,22 +14,23 @@ export default function Navbar() {
   };
 
   const menuItems = [
-    { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
+    { href: "/skills", label: 'Skills' },
+    { href: '/experience', label: 'Experience' },
     { href: '/projects', label: 'Projects' },
     { href: '/contact', label: 'Contact' },
   ];
 
   return (
-    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50">
+    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm border-b border-white/20 dark:border-white/10 shadow-sm z-50">
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 ">
           <Link href="/" className="text-xl font-bold text-primary">
             Portfolio
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ">
             {menuItems.map((item) => (
               <Link 
                 key={item.href}

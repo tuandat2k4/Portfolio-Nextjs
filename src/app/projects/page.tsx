@@ -1,6 +1,7 @@
 "use client";
 
 import { projects } from "@/contents/projects";
+
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -11,16 +12,17 @@ import {
   fadeIn,
 } from "@/utils/animations";
 
-const page = () => {
+const Projects = () => {
   return (
     <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
         {/* Title */}
         <motion.h2
-          className="text-3xl font-bold mb-12 text-center"
+          className="text-3xl font-bold mb-12 text-center text-primary dark:text-white"
           {...fadeInUp}
         >
           Featured Projects
+          <div className="w-24 h-1 bg-primary mx-auto mt-3"></div>
         </motion.h2>
 
         {/* Project Grid */}
@@ -126,4 +128,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Projects;

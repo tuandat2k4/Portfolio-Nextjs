@@ -1,14 +1,14 @@
 import { Project } from "../types";
 
+// Danh sách các dự án
 export const projects: Project[] = [
   {
     title: "E-commerce Platform",
-    description:
-      "A full-stack e-commerce platform built with Next.js, TypeScript, and Tailwind CSS.",
+    description: "A full-stack e-commerce platform built with Next.js, TypeScript, and Tailwind CSS.",
     technologies: [
       { name: "Next.js", icon: "/icons/next.svg" },
-      { name: "TypeScript", icon: "/icons/ts.svg" },
-      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
+      { name: "TypeScript", icon: "/tech_logo/typescript.png" },
+      { name: "Tailwind CSS", icon: "/tech_logo/tailwindcss.png" },
     ],
     githubLink: "https://github.com",
     demoLink: "https://demo.com",
@@ -16,13 +16,12 @@ export const projects: Project[] = [
   },
   {
     title: "Task Management App",
-    description:
-      "A collaborative task management application with real-time updates.",
+    description: "A collaborative task management application with real-time updates.",
     technologies: [
-      { name: "React", icon: "/icons/react.svg" },
-      { name: "Node.js", icon: "/icons/nodejs.svg" },
-      { name: "MongoDB", icon: "/icons/mongodb.svg" },
-      { name: "Socket.io", icon: "/icons/socket.svg" },
+      { name: "React", icon: "/tech_logo/reactjs.png" },
+      { name: "Node.js", icon: "/tech_logo/nodejs.png" },
+      { name: "MongoDB", icon: "/tech_logo/mongodb.png" },
+      { name: "Socket.io", icon: "/icons/socket.svg" }, // Chỉ có SVG
     ],
     githubLink: "https://github.com",
     demoLink: "https://demo.com",
@@ -30,12 +29,11 @@ export const projects: Project[] = [
   },
   {
     title: "Portfolio Website",
-    description:
-      "My personal portfolio website showcasing my projects and skills.",
+    description: "My personal portfolio website showcasing my projects and skills.",
     technologies: [
       { name: "Next.js", icon: "/icons/next.svg" },
-      { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
-      { name: "Framer Motion", icon: "/icons/framermotion.svg" },
+      { name: "Tailwind CSS", icon: "/tech_logo/tailwindcss.png" },
+      { name: "Framer Motion", icon: "/icons/framermotion.svg" }, // Chỉ có SVG
     ],
     githubLink: "https://github.com",
     demoLink: "https://demo.com",
@@ -43,11 +41,9 @@ export const projects: Project[] = [
   },
   {
     title: "Blog Platform",
-    description:
-      "A blogging platform with user authentication and markdown support.",
+    description: "A blogging platform with user authentication and markdown support.",
     technologies: [
-      { name: "GraphQL", icon: "/icons/graphql.svg" },
-      
+      { name: "GraphQL", icon: "/icons/graphql.svg" }, // Chỉ có SVG
     ],
     githubLink: "https://github.com",
     demoLink: "https://demo.com",
@@ -57,8 +53,7 @@ export const projects: Project[] = [
     title: "Weather App",
     description: "A weather application that provides real-time weather updates.",
     technologies: [
-      { name: "React", icon: "/icons/react.svg" },
-
+      { name: "React", icon: "/tech_logo/reactjs.png" },
     ],
     githubLink: "https://github.com",
     demoLink: "https://demo.com",
@@ -68,9 +63,9 @@ export const projects: Project[] = [
     title: "Chat Application",
     description: "A real-time chat application using WebSocket technology.",
     technologies: [
-      { name: "React", icon: "/icons/react.svg" },
-      { name: "Node.js", icon: "/icons/nodejs.svg" },
-      { name: "Socket.io", icon: "/icons/socket.svg" },
+      { name: "React", icon: "/tech_logo/reactjs.png" },
+      { name: "Node.js", icon: "/tech_logo/nodejs.png" },
+      { name: "Socket.io", icon: "/icons/socket.svg" }, // Chỉ có SVG
     ],
     githubLink: "https://github.com",
     demoLink: "https://demo.com",
@@ -80,8 +75,7 @@ export const projects: Project[] = [
     title: "Recipe Finder",
     description: "A recipe search application using the Edamam API.",
     technologies: [
-      { name: "React", icon: "/icons/react.svg" },
-
+      { name: "React", icon: "/tech_logo/reactjs.png" },
     ],
     githubLink: "https://github.com",
     demoLink: "https://demo.com",
@@ -91,8 +85,8 @@ export const projects: Project[] = [
     title: "Expense Tracker",
     description: "A personal finance tracker to manage expenses and income.",
     technologies: [
-      { name: "React", icon: "/icons/react.svg" },
-      { name: "Firebase", icon: "/icons/firebase.svg" },
+      { name: "React", icon: "/tech_logo/reactjs.png" },
+      { name: "Firebase", icon: "/tech_logo/firebase.png" },
     ],
     githubLink: "https://github.com",
     demoLink: "https://demo.com",
