@@ -1,0 +1,49 @@
+{
+  "navbar": {
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "experience": "Kinh nghiệm",
+    "projects": "Dự án",
+    "contact": "Liên hệ",
+    "light": "Chế độ sáng",
+    "dark": "Chế độ tối"
+  },
+  "hero": {
+    "greeting": "Xin chào, mình là",
+    "subtitle": "Cử nhân mới tốt nghiệp | Khám phá Web Development | Luôn học hỏi",
+    "viewProjects": "Xem dự án",
+    "contactMe": "Liên hệ"
+  },
+  "skills": {
+    "title": "KỸ NĂNG",
+    "desc": "Tổng hợp kỹ năng và kinh nghiệm kỹ thuật của tôi, được trau dồi qua nhiều dự án và trải nghiệm"
+  },
+  "projects": {
+    "title": "Dự án nổi bật",
+    "code": "Mã nguồn",
+    "liveDemo": "Xem demo"
+  },
+  "experience": {
+    "title": "KINH NGHIỆM",
+    "desc": "Tổng hợp kinh nghiệm làm việc và các vai trò tôi đã đảm nhiệm tại nhiều tổ chức khác nhau"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "getInTouch": "Kết nối với tôi",
+    "cta": "Mong muốn được học hỏi, phát triển và tạo ra giá trị trong những cơ hội sắp tới",
+    "name": "Họ và tên",
+    "email": "Email",
+    "message": "Nội dung",
+    "sending": "Đang gửi...",
+    "send": "Gửi tin nhắn",
+    "success": "Gửi tin nhắn thành công!",
+    "emailLabel": "Email",
+    "phone": "Điện thoại",
+    "location": "Địa điểm"
+  },
+  "about": {
+    "achievements": "Thành tựu nổi bật"
+  }
+}
+
+

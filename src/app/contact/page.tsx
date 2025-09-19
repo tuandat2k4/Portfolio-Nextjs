@@ -5,6 +5,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { fadeInUp, slideInLeft, slideInRight, staggerContainer } from '@/utils/animations'
 import FormField from '@/app/components/FormField'
+import { useTranslations } from 'next-intl'
 
 interface FormData {
   name: string
@@ -15,22 +16,34 @@ interface FormData {
 type FormStatus = 'idle' | 'loading' | 'success' | 'error'
 
 export default function Contact() {
+  const t = useTranslations('contact')
   const [formData, setFormData] = useState<FormData>({ name: '', email: '', message: '' })
   const [status, setStatus] = useState<FormStatus>('idle')
+  const [errorMessage, setErrorMessage] = useState<string>('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('loading')
+    setErrorMessage('')
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       })
-      if (!res.ok) throw new Error('Failed')
+      
+      const data = await res.json()
+      
+      if (!res.ok) {
+        setErrorMessage(data.message || 'Failed to send message')
+        setStatus('error')
+        return
+      }
+      
       setStatus('success')
       setFormData({ name: '', email: '', message: '' })
-    } catch {
+    } catch (error) {
+      setErrorMessage('Network error. Please check your connection and try again.')
       setStatus('error')
     }
   }
@@ -40,16 +53,16 @@ export default function Contact() {
   }
 
   const contactItems = [
-    { icon: <FaEnvelope className="h-6 w-6 text-primary" />, title: "Email", value: "tdat96386@gmail.com", href: "mailto:tdat96386@gmail.com" },
-    { icon: <FaPhone className="h-6 w-6 text-primary" />, title: "Phone", value: "0942417773", href: "tel:0942417773" },
-    { icon: <FaMapMarkerAlt className="h-6 w-6 text-primary" />, title: "Location", value: "Ho Chi Minh City" }
+    { icon: <FaEnvelope className="h-6 w-6 text-primary" />, title: t('emailLabel'), value: "tdat96386@gmail.com", href: "mailto:tdat96386@gmail.com" },
+    { icon: <FaPhone className="h-6 w-6 text-primary" />, title: t('phone'), value: "0942417773", href: "tel:0942417773" },
+    { icon: <FaMapMarkerAlt className="h-6 w-6 text-primary" />, title: t('location'), value: "TP. Hồ Chí Minh" }
   ]
 
   return (
     <div className="container max-w-7xl mx-auto py-12">
       {/* Title */}
       <motion.h1 className="text-4xl text-primary font-bold mb-8 text-center" {...fadeInUp}>
-        Contact Me
+        {t('title')}
         <div className="w-24 h-1 bg-primary mx-auto mt-3"></div>
       </motion.h1>
 
@@ -57,9 +70,9 @@ export default function Contact() {
         {/* Contact Info */}
         <motion.div className="space-y-8" {...slideInLeft}>
           <motion.div {...fadeInUp}>
-            <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
+            <h2 className="text-2xl font-semibold mb-4">{t('getInTouch')}</h2>
             <p className="text-secondary">
-              Looking forward to opportunities where I can learn, grow, and make an impact
+              {t('cta')}
             </p>
           </motion.div>
 
@@ -90,13 +103,13 @@ export default function Contact() {
         <motion.div className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md" {...slideInRight}>
           <motion.form onSubmit={handleSubmit} className="space-y-6" {...staggerContainer}>
             <motion.div {...fadeInUp}>
-              <FormField label="Name" name="name" value={formData.name} onChange={handleChange} required />
+              <FormField label={t('name')} name="name" value={formData.name} onChange={handleChange} required />
             </motion.div>
             <motion.div {...fadeInUp}>
-              <FormField label="Email" type="email" name="email" value={formData.email} onChange={handleChange} required />
+              <FormField label={t('email')} type="email" name="email" value={formData.email} onChange={handleChange} required />
             </motion.div>
             <motion.div {...fadeInUp}>
-              <FormField label="Message" type="textarea" name="message" value={formData.message} onChange={handleChange} required />
+              <FormField label={t('message')} type="textarea" name="message" value={formData.message} onChange={handleChange} required />
             </motion.div>
 
             <motion.button
@@ -106,17 +119,17 @@ export default function Contact() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              {status === 'loading' ? 'Sending...' : 'Send Message'}
+              {status === 'loading' ? t('sending') : t('send')}
             </motion.button>
 
             {status === 'success' && (
               <motion.p className="text-green-500 text-center" {...fadeInUp}>
-                Message sent successfully!
+                {t('success')}
               </motion.p>
             )}
             {status === 'error' && (
               <motion.p className="text-red-500 text-center" {...fadeInUp}>
-                Failed to send message. Please try again.
+                {errorMessage}
               </motion.p>
             )}
           </motion.form>

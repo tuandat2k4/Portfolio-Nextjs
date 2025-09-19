@@ -4,8 +4,26 @@ import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/out
 import { useTheme } from '../context/ThemeContext'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
+import {useTranslations, useLocale} from 'next-intl'
+import {usePathname, useRouter} from 'next/navigation'
 
 export default function Navbar() {
+  const t = useTranslations('navbar')
+  const locale = useLocale()
+  const pathname = usePathname()
+  const router = useRouter()
+  const setLocale = async (value: 'vi' | 'en') => {
+    // Show loading state
+    setIsMobileMenuOpen(false);
+    
+    // Set cookie
+    document.cookie = `locale=${value}; path=/; max-age=31536000; SameSite=Lax`;
+    
+    // Smooth reload with a small delay
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
+  }
   const { theme, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -14,11 +32,11 @@ export default function Navbar() {
   };
 
   const menuItems = [
-    { href: '/about', label: 'About' },
-    { href: "/skills", label: 'Skills' },
-    { href: '/experience', label: 'Experience' },
-    { href: '/projects', label: 'Projects' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/about', label: t('about') },
+    { href: '/skills', label: t('skills') },
+    { href: '/experience', label: t('experience') },
+    { href: '/projects', label: t('projects') },
+    { href: '/contact', label: t('contact') },
   ];
 
   return (
@@ -40,6 +58,10 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+            <div className="flex items-center gap-2">
+              <button onClick={() => setLocale('vi')} className={`px-2 py-1 rounded ${locale === 'vi' ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-800'}`}>VI</button>
+              <button onClick={() => setLocale('en')} className={`px-2 py-1 rounded ${locale === 'en' ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-800'}`}>EN</button>
+            </div>
             <motion.button
               onClick={toggleTheme}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -96,6 +118,10 @@ export default function Navbar() {
                     </Link>
                   </motion.div>
                 ))}
+                <div className="flex items-center gap-3 px-2">
+                  <button onClick={() => { setLocale('vi'); setIsMobileMenuOpen(false); }} className={`px-2 py-1 rounded ${locale === 'vi' ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-800'}`}>VI</button>
+                  <button onClick={() => { setLocale('en'); setIsMobileMenuOpen(false); }} className={`px-2 py-1 rounded ${locale === 'en' ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-800'}`}>EN</button>
+                </div>
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -111,12 +137,12 @@ export default function Navbar() {
                     {theme === 'dark' ? (
                       <>
                         <SunIcon className="h-5 w-5 mr-2" />
-                        Light Mode
+                        {t('light')}
                       </>
                     ) : (
                       <>
                         <MoonIcon className="h-5 w-5 mr-2" />
-                        Dark Mode
+                        {t('dark')}
                       </>
                     )}
                   </button>

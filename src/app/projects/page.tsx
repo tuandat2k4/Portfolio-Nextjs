@@ -1,7 +1,6 @@
 "use client";
 
-import { projects } from "@/contents/projects";
-
+import { projectsByLocale } from "@/contents/projects";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -11,8 +10,12 @@ import {
   cardHoverSmall,
   fadeIn,
 } from "@/utils/animations";
+import { useTranslations, useLocale } from 'next-intl';
 
 const Projects = () => {
+  const t = useTranslations('projects');
+  const locale = useLocale() as 'vi' | 'en';
+  const projects = projectsByLocale[locale];
   return (
     <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
@@ -21,7 +24,7 @@ const Projects = () => {
           className="text-3xl font-bold mb-12 text-center text-primary dark:text-white"
           {...fadeInUp}
         >
-          Featured Projects
+          {t('title')}
           <div className="w-24 h-1 bg-primary mx-auto mt-3"></div>
         </motion.h2>
 
@@ -35,7 +38,7 @@ const Projects = () => {
               key={project.title}
               className="bg-white dark:bg-dark/50 rounded-lg shadow-md p-6"
               {...fadeInUp}
-              {...cardHoverSmall}
+              whileHover={{ scale: 1.02 }}
             >
               {/* Image */}
               <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
@@ -82,9 +85,9 @@ const Projects = () => {
                     <Image
                       src={tech.icon}
                       alt={tech.name}
-                      width={30}
-                      height={30}
-                      className="h-5 w-5"
+                      width={10}
+                      height={10}
+                      className="h-6 w-6"
                     />
                   </motion.div>
                 ))}
@@ -105,7 +108,7 @@ const Projects = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <FaGithub className="h-5 w-5" />
-                  Code
+                  {t('code')}
                 </motion.a>
 
                 <motion.a
@@ -117,7 +120,7 @@ const Projects = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <FaExternalLinkAlt className="h-5 w-5" />
-                  Live Demo
+                  {t('liveDemo')}
                 </motion.a>
               </motion.div>
             </motion.article>

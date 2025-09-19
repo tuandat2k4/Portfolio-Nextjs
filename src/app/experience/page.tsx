@@ -1,20 +1,23 @@
 import React from "react";
+import { useTranslations, useLocale } from 'next-intl';
 import Image from "next/image";
-import { experiences } from "@/contents/skillsInfo";
+import { experiencesByLocale } from "@/contents/skillsInfo";
 import { ExperienceType } from "@/types";
 
 const Experience = () => {
+  const t = useTranslations('experience');
+  const locale = useLocale() as 'vi' | 'en';
+  const experiences = experiencesByLocale[locale];
   return (
     <section className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2">
       {/* Section Title */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-primary dark:text-white">
-          EXPERIENCE
+          {t('title')}
         </h2>
         <div className="w-32 h-1 bg-primary mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
-          A collection of my work experience and the roles I have taken in
-          various organizations
+          {t('desc')}
         </p>
       </div>
 
@@ -38,7 +41,7 @@ const Experience = () => {
                 alt={experience.company}
                 width={64}
                 height={64}
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-contain rounded-full"
               />
             </div>
 
@@ -57,7 +60,7 @@ const Experience = () => {
                     alt={experience.company}
                     width={64}
                     height={64}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 
@@ -80,7 +83,9 @@ const Experience = () => {
 
               <p className="mt-4 text-dark dark:text-white">{experience.desc}</p>
               <div className="mt-4">
-                <h5 className="font-medium text-dark dark:text-white">Skills:</h5>
+                <h5 className="font-medium text-dark dark:text-white">
+                  {locale === 'vi' ? 'Kỹ năng:' : 'Skills:'}
+                </h5>
                 <ul className="flex flex-wrap mt-2">
                   {experience.skills.map((skill: string, index: number) => (
                     <li

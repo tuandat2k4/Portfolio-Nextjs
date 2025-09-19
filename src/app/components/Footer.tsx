@@ -14,19 +14,19 @@ const Footer = () => {
 
           <div className="flex space-x-4">
           <Link
-            href="/"
+            href="https://github.com/tuandat2k4"
             className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300 "
           >
             <FaGithub />
           </Link>
           <Link
-            href="/"
+            href="https://www.linkedin.com/in/dat-phan-7186732b6"
             className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300 "
           >
             <FaLinkedin />
           </Link>
           <Link
-            href="/"
+            href="https://x.com/DatPhan0726"
             className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300 "
           >
             <FaTwitter />

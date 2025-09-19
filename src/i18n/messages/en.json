@@ -1,0 +1,49 @@
+{
+  "navbar": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "subtitle": "Fresh Graduate | Exploring Web Development | Always Learning",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "skills": {
+    "title": "SKILLS",
+    "desc": "A collection of my technical skills and expertise honed through various projects and experiences"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "code": "Code",
+    "liveDemo": "Live Demo"
+  },
+  "experience": {
+    "title": "EXPERIENCE",
+    "desc": "A summary of my work experience and roles held across different organizations"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "getInTouch": "Get in Touch",
+    "cta": "Looking forward to opportunities where I can learn, grow, and make an impact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "emailLabel": "Email",
+    "phone": "Phone",
+    "location": "Location"
+  },
+  "about": {
+    "achievements": "Key Achievements"
+  }
+}
+
+

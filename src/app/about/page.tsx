@@ -2,12 +2,16 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { aboutData } from '@/contents/aboutData'
+import { aboutDataByLocale } from '@/contents/aboutData'
 import { AboutData } from '@/types'
 import { motion } from 'framer-motion'
 import { fadeInUp, slideInLeft, slideInRight, staggerContainer } from '@/utils/animations'
+import { useLocale, useTranslations } from 'next-intl'
 
 const About = () => {
+  const locale = useLocale() as 'vi' | 'en'
+  const t = useTranslations('about')
+  const aboutData = aboutDataByLocale[locale]
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container max-w-7xl mx-auto px-4">
@@ -82,7 +86,7 @@ const About = () => {
             {/* Achievements */}
             <motion.div {...fadeInUp}>
               <h4 className="text-xl font-semibold text-primary dark:text-white mb-4">
-                Key Achievements
+                {t('achievements')}
               </h4>
               <ul className="space-y-2">
                 {aboutData.achievements.map((achievement, index) => (

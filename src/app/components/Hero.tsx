@@ -5,8 +5,10 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeIn, scaleIn } from "@/utils/animations";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations('hero');
   return (
     <section className="py-28">
       <div className="container max-w-7xl mx-auto px-4">
@@ -29,7 +31,7 @@ export default function Hero() {
             {...fadeInUp}
             transition={{ delay: 0.3 }}
           >
-            Hi, I&apos;m{" "}
+            {t('greeting')}{" "}
             <motion.span
               className="text-primary"
               {...fadeIn}
@@ -43,7 +45,7 @@ export default function Hero() {
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
-            Fresh Graduate | Exploring Web Development | Always Learning{" "}
+            {t('subtitle')}{" "}
           </motion.p>
           <motion.div
             className="flex justify-center space-x-4 mb-8"
@@ -91,7 +93,7 @@ export default function Hero() {
                 href="/projects"
                 className="bg-primary inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
               >
-                View Projects
+                {t('viewProjects')}
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -99,7 +101,7 @@ export default function Hero() {
                 href="/contact"
                 className=" inline-block w-full bg-gray-500  md:w-auto text-white dark:text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
               >
-                Contact Me
+                {t('contactMe')}
               </Link>
             </motion.div>
           </motion.div>

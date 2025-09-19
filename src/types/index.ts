@@ -81,30 +81,6 @@ export interface AboutData {
   achievements: string[];  // Danh sách thành tựu
 }
 
-// ========================================
-// CÁC LOẠI DỮ LIỆU LIÊN HỆ
-// ========================================
-
-/**
- * Dữ liệu form liên hệ
- * Dùng trong form liên hệ
- */
-export interface FormData {
-  name: string;      // Tên người dùng
-  email: string;     // Email người dùng
-  message: string;   // Nội dung tin nhắn
-}
-
-/**
- * Trạng thái gửi form
- * Dùng để quản lý trạng thái form
- */
-export type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
 
-export interface AnimationVariants {
-  hidden: { opacity: number; y?: number; x?: number };
-  visible: { opacity: number; y?: number; x?: number };
-  transition?: { duration: number; delay?: number };
-}
 

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://my-portfolio-datt.vercel.app/sitemap.xml
+
+

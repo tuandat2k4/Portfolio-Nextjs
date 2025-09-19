@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {
+:root {
   --color-primary: #007AFF;
   --color-secondary: #6B7280;
   --color-dark: #1F2937;
@@ -16,7 +16,16 @@
   --animation-slide-up: slideUp 0.5s ease-in-out;
 }
 
-@custom-variant dark (&:where(.dark, .dark *));
+@layer base {
+  .dark {
+    --color-primary: #007AFF;
+    --color-secondary: #6B7280;
+    --color-dark: #1F2937;
+    --color-light: #F9FAFB;
+    --color-text: #ffffff;
+    --color-bg: #1F2937;
+  }
+}
 
 a {
   transition: all 0.2s ease;
