@@ -1,7 +1,6 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Image from "next/image";
 import { experiencesByLocale } from "@/contents/skillsInfo";
-import { ExperienceType } from "@/types";
 
 const Experience = () => {
   const t = useTranslations('experience');

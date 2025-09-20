@@ -16,16 +16,17 @@
   },
   "skills": {
     "title": "KỸ NĂNG",
-    "desc": "Tổng hợp kỹ năng và kinh nghiệm kỹ thuật của tôi, được trau dồi qua nhiều dự án và trải nghiệm"
+    "desc": "Tổng hợp kỹ năng và kinh nghiệm của tôi, được trau dồi qua các dự án cá nhân và kỳ thực tập"
   },
   "projects": {
-    "title": "Dự án nổi bật",
+    "title": "DỰ ÁN NỔI BẬT",
+    "desc": "Các dự án cá nhân và học tập tôi đã phát triển để nâng cao kỹ năng lập trình",
     "code": "Mã nguồn",
     "liveDemo": "Xem demo"
   },
   "experience": {
     "title": "KINH NGHIỆM",
-    "desc": "Tổng hợp kinh nghiệm làm việc và các vai trò tôi đã đảm nhiệm tại nhiều tổ chức khác nhau"
+    "desc": "Tổng hợp kinh nghiệm thực tập và các vai trò tôi đã đảm nhiệm tại nhiều công ty khác nhau"
   },
   "contact": {
     "title": "Liên hệ",

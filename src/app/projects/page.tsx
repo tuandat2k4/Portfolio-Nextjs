@@ -21,13 +21,18 @@ const Projects = () => {
     <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
         {/* Tiêu đề */}
-        <motion.h2
-          className="text-3xl font-bold mb-12 text-center text-primary dark:text-white"
+        <motion.div
+          className="text-center mb-12"
           {...fadeInUp}
         >
-          {t('title')}
-          <div className="w-24 h-1 bg-primary mx-auto mt-3"></div>
-        </motion.h2>
+          <h2 className="text-3xl font-bold mb-4 text-primary dark:text-white">
+            {t('title')}
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            {t('desc')}
+          </p>
+        </motion.div>
 
         {/* Lưới Dự án */}
         <motion.div

@@ -16,16 +16,17 @@
   },
   "skills": {
     "title": "SKILLS",
-    "desc": "A collection of my technical skills and expertise honed through various projects and experiences"
+    "desc": "A collection of my technical skills and expertise developed through personal projects and internships"
   },
   "projects": {
-    "title": "Featured Projects",
+    "title": "FEATURED PROJECTS",
+    "desc": "Personal and academic projects I've developed to enhance my programming skills",
     "code": "Code",
     "liveDemo": "Live Demo"
   },
   "experience": {
     "title": "EXPERIENCE",
-    "desc": "A summary of my work experience and roles held across different organizations"
+    "desc": "A summary of my internship experience and roles held across different companies"
   },
   "contact": {
     "title": "Contact Me",

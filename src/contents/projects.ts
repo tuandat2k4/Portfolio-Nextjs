@@ -108,16 +108,16 @@ export const projectsByLocale: Record<'vi' | 'en', Project[]> = {
       image: "/projects/e-commerce-website.png",
     },
     {
-      title: "Task Management App",
-      description: "Task management application with real-time collaboration support.",
+      title: "Rentify Platform",
+      description: "Property rental platform with real-time search and booking features.",
       technologies: [
         { name: "React", icon: "/tech_logo/react.png" },
         { name: "Node.js", icon: "/tech_logo/nodejs.png" },
         { name: "MongoDB", icon: "/tech_logo/mongodb.png" },
         { name: "Socket.io", icon: "/icons/socket.svg" },
       ],
-      githubLink: "https://github.com",
-      demoLink: "https://demo.com",
+      githubLink: "https://github.com/tuandat2k4/rentify-platform",
+      demoLink: "https://rentify-2-4785.vercel.app/",
       image: "/projects/rentify.png",
     },
     {

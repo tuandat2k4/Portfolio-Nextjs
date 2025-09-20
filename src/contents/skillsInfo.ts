@@ -140,7 +140,7 @@ export const experiencesByLocale: Record<'vi' | 'en', ExperienceType[]> = {
       role: "Thực tập sinh Phát triển Phần mềm",
       company: "Amazon",
       date: "06/2024 - Hiện tại",
-      desc: "Thực tập sinh Phát triển Phần mềm tại Amazon, tham gia xây dựng các ứng dụng web quy mô lớn với công nghệ hiện đại. Trải nghiệm thực tế với dịch vụ đám mây, kiến trúc microservices và quy trình Agile trong môi trường tốc độ cao.",
+      desc: "Thực tập sinh Phát triển Phần mềm tại Amazon, học hỏi và tham gia vào các dự án nhỏ với công nghệ hiện đại. Được hướng dẫn bởi senior developers để hiểu về dịch vụ đám mây, kiến trúc microservices và quy trình Agile trong môi trường công ty lớn.",
       skills: [
         "React",
         "TypeScript",
@@ -160,7 +160,7 @@ export const experiencesByLocale: Record<'vi' | 'en', ExperienceType[]> = {
       role: "Thực tập sinh Frontend",
       company: "Meta (Facebook)",
       date: "01/2024 - 05/2024",
-      desc: "Hoàn thành kỳ thực tập 5 tháng tại Meta với vai trò Frontend, phát triển các thành phần giao diện và ứng dụng web responsive. Hợp tác với senior developer để xây dựng ứng dụng React có khả năng mở rộng và học hỏi các best practice về chất lượng mã và tối ưu hiệu năng.",
+      desc: "Hoàn thành kỳ thực tập 5 tháng tại Meta với vai trò Frontend, được hướng dẫn phát triển các thành phần giao diện đơn giản và ứng dụng web responsive. Học hỏi từ senior developer về cách xây dựng ứng dụng React và các best practice về chất lượng mã cũng như tối ưu hiệu năng.",
       skills: [
         "React",
         "Redux",
@@ -178,7 +178,7 @@ export const experiencesByLocale: Record<'vi' | 'en', ExperienceType[]> = {
       role: "Thực tập sinh Web",
       company: "Google (YouTube)",
       date: "09/2023 - 12/2023",
-      desc: "Thực tập tại đội YouTube của Google, tập trung vào phát triển frontend và cải thiện trải nghiệm người dùng. Tích lũy kinh nghiệm về công nghệ web hiện đại, thiết kế responsive và quy trình làm việc cộng tác trong môi trường công ty công nghệ lớn.",
+      desc: "Thực tập tại đội YouTube của Google, được hướng dẫn về phát triển frontend và cải thiện trải nghiệm người dùng. Học hỏi về công nghệ web hiện đại, thiết kế responsive và quy trình làm việc cộng tác trong môi trường công ty công nghệ lớn.",
       skills: [
         "HTML",
         "CSS",
@@ -198,7 +198,7 @@ export const experiencesByLocale: Record<'vi' | 'en', ExperienceType[]> = {
       role: "Software Development Intern",
       company: "Amazon",
       date: "06/2024 - Present",
-      desc: "Software Development Intern at Amazon, participating in building large-scale web applications with modern technology. Gained practical experience with cloud services, microservices architecture, and Agile processes in a high-speed environment.",
+      desc: "Software Development Intern at Amazon, learning and contributing to small projects with modern technology. Guided by senior developers to understand cloud services, microservices architecture, and Agile processes in a large company environment.",
       skills: [
         "React",
         "TypeScript",
@@ -218,7 +218,7 @@ export const experiencesByLocale: Record<'vi' | 'en', ExperienceType[]> = {
       role: "Frontend Intern",
       company: "Meta (Facebook)",
       date: "01/2024 - 05/2024",
-      desc: "Completed a 5-month internship at Meta as a Frontend developer, developing UI components and responsive web applications. Collaborated with senior developers to build scalable React applications and learned best practices for code quality and performance optimization.",
+      desc: "Completed a 5-month internship at Meta as a Frontend developer, guided to develop simple UI components and responsive web applications. Learned from senior developers about building React applications and best practices for code quality and performance optimization.",
       skills: [
         "React",
         "Redux",
@@ -236,7 +236,7 @@ export const experiencesByLocale: Record<'vi' | 'en', ExperienceType[]> = {
       role: "Web Development Intern",
       company: "Google (YouTube)",
       date: "09/2023 - 12/2023",
-      desc: "Interned at Google's YouTube team, focusing on frontend development and improving user experience. Gained experience with modern web technologies, responsive design, and collaborative workflows in a large tech company environment.",
+      desc: "Interned at Google's YouTube team, guided in frontend development and improving user experience. Learned about modern web technologies, responsive design, and collaborative workflows in a large tech company environment.",
       skills: [
         "HTML",
         "CSS",
