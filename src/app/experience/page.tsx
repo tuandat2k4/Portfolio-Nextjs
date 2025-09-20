@@ -9,8 +9,9 @@ const Experience = () => {
   const locale = useLocale() as 'vi' | 'en';
   const experiences = experiencesByLocale[locale];
   return (
-    <section className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2">
-      {/* Section Title */}
+    <section className="py-24 pb-24 px-4 md:px-8 lg:px-16 font-sans bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+           
+      {/* Tiêu đề Section */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-primary dark:text-white">
           {t('title')}
@@ -21,12 +22,12 @@ const Experience = () => {
         </p>
       </div>
 
-      {/* Experience Timeline */}
+      {/* Timeline Kinh nghiệm */}
       <div className="relative">
-        {/* Vertical line */}
+        {/* Đường thẳng dọc */}
         <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-black dark:bg-white h-full"></div>
 
-        {/* Experience Entries */}
+        {/* Các mục Kinh nghiệm */}
         {experiences.map((experience, index) => (
           <div
             key={experience.id}
@@ -34,8 +35,8 @@ const Experience = () => {
               index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
             }`}
           >
-            {/* Timeline Circle */}
-            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 white:bg-dark bg-gray-400 border-4 border-primary w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
+            {/* Vòng tròn Timeline */}
+            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-white dark:bg-gray-800 border-4 border-primary w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
               <Image
                 src={experience.img}
                 alt={experience.company}
@@ -45,15 +46,15 @@ const Experience = () => {
               />
             </div>
 
-            {/* Content Section */}
+            {/* Phần Nội dung */}
             <div
               className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl border border-white bg-white dark:bg-gray-900 backdrop-blur-md shadow-xl shadow-primary/20 ${
                 index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
               } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
             >
-              {/* Flex container for image and text */}
+              {/* Container flex cho ảnh và text */}
               <div className="flex items-center space-x-6">
-                {/* Company Logo/Image */}
+                {/* Logo/Hình ảnh Công ty */}
                 <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
                   <Image
                     src={experience.img}
@@ -64,7 +65,7 @@ const Experience = () => {
                   />
                 </div>
 
-                {/* Role, Company Name, and Date */}
+                {/* Vai trò, Tên công ty và Ngày */}
                 <div className="flex flex-col justify-between">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-semibold text-dark dark:text-white">
@@ -74,7 +75,7 @@ const Experience = () => {
                       {experience.company}
                     </h4>
                   </div>
-                  {/* Date at the bottom */}
+                  {/* Ngày ở dưới cùng */}
                   <p className="text-sm text-dark dark:text-white mt-2">
                     {experience.date}
                   </p>

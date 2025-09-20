@@ -16,19 +16,19 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
-  // Update theme
+  // Cập nhật theme
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
     localStorage.setItem("theme", newTheme);
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
-  // Toggle theme
+  // Chuyển đổi theme
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  // Initialize theme
+  // Khởi tạo theme
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as Theme | null;
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -39,7 +39,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setMounted(true);
   }, []);
 
-  // Prevent flash of wrong theme
+  // Ngăn chặn flash theme sai
   if (!mounted) {
     return null;
   }

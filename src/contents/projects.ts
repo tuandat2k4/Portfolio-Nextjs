@@ -11,22 +11,22 @@ export const projectsByLocale: Record<'vi' | 'en', Project[]> = {
       { name: "TypeScript", icon: "/tech_logo/typescript.png" },
       { name: "Tailwind CSS", icon: "/tech_logo/tailwindcss.png" },
     ],
-    githubLink: "https://github.com",
-    demoLink: "https://demo.com",
+    githubLink: "https://github.com/tuandat2k4/e-commerce-nextjs",
+    demoLink: "https://quan-ly-kho.netlify.app/",
     image: "/projects/e-commerce-website.png",
   },
   {
-    title: "Ứng dụng Quản lý Công việc",
-    description: "Ứng dụng quản lý công việc hỗ trợ cộng tác với cập nhật thời gian thực.",
+    title: "Ứng dụng tìm kiếm và cho thuê trọ",
+    description: "Ứng dụng tìm kiếm và cho thuê trọ với các tính năng như tìm kiếm, đăng tin, xem thông tin trọ, và liên hệ.",
     technologies: [
       { name: "React", icon: "/tech_logo/react.png" },
       { name: "Node.js", icon: "/tech_logo/nodejs.png" },
       { name: "MongoDB", icon: "/tech_logo/mongodb.png" },
       { name: "Socket.io", icon: "/icons/socket.svg" }, // Chỉ có SVG
     ],
-    githubLink: "https://github.com",
-    demoLink: "https://demo.com",
-    image: "/projects/task-manager.webp",
+    githubLink: "https://github.com/tuandat2k4/rentify-platform",
+    demoLink: "https://rentify-2-4785.vercel.app/",
+    image: "/projects/rentify.png",
   },
   {
     title: "Website Portfolio",
@@ -36,8 +36,8 @@ export const projectsByLocale: Record<'vi' | 'en', Project[]> = {
       { name: "Tailwind CSS", icon: "/tech_logo/tailwindcss.png" },
       { name: "Framer Motion", icon: "/icons/framermotion.svg" }, // Chỉ có SVG
     ],
-    githubLink: "https://github.com",
-    demoLink: "https://demo.com",
+    githubLink: "https://github.com/tuandat2k4/Portfolio-Nextjs",
+    demoLink: "https://my-portfolio-datt.vercel.app/",
     image: "/projects/portfolio-website.jpg",
   },
   {
@@ -118,7 +118,7 @@ export const projectsByLocale: Record<'vi' | 'en', Project[]> = {
       ],
       githubLink: "https://github.com",
       demoLink: "https://demo.com",
-      image: "/projects/task-manager.webp",
+      image: "/projects/rentify.png",
     },
     {
       title: "Portfolio Website",

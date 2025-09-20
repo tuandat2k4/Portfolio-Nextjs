@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
-        {/* Title */}
+        {/* Tiêu đề */}
         <motion.h2
           className="text-3xl font-bold mb-12 text-center text-primary dark:text-white"
           {...fadeInUp}
@@ -28,7 +28,7 @@ const Projects = () => {
           <div className="w-24 h-1 bg-primary mx-auto mt-3"></div>
         </motion.h2>
 
-        {/* Project Grid */}
+        {/* Lưới Dự án */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
           {...staggerContainer}
@@ -40,7 +40,7 @@ const Projects = () => {
               {...fadeInUp}
               whileHover={{ scale: 1.02 }}
             >
-              {/* Image */}
+              {/* Hình ảnh */}
               <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
                 <Image
                   src={project.image}
@@ -51,7 +51,7 @@ const Projects = () => {
                 />
               </div>
 
-              {/* Title */}
+              {/* Tiêu đề */}
               <motion.h3
                 className="text-xl font-semibold mb-2"
                 whileHover={{ x: 5 }}
@@ -60,7 +60,7 @@ const Projects = () => {
                 {project.title}
               </motion.h3>
 
-              {/* Description */}
+              {/* Mô tả */}
               <motion.p
                 className="text-gray-600 dark:text-gray-300 mb-4"
                 {...fadeIn}
@@ -69,7 +69,7 @@ const Projects = () => {
                 {project.description}
               </motion.p>
 
-              {/* Technologies */}
+              {/* Công nghệ */}
               <motion.div
                 className="flex flex-wrap gap-2 mb-4 items-center"
                 {...fadeIn}
@@ -93,7 +93,7 @@ const Projects = () => {
                 ))}
               </motion.div>
 
-              {/* Links */}
+              {/* Liên kết */}
               <motion.div
                 className="flex gap-4"
                 {...fadeIn}

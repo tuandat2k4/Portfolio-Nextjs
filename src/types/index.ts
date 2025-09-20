@@ -1,17 +1,9 @@
 
-/**
- * Công nghệ/Kỹ năng với tên và biểu tượng
- * Dùng trong phần dự án và kỹ năng
- */
 export interface Technology {
-  name: string;    // Tên công nghệ (ví dụ: "React", "TypeScript")
+  name: string;    // Tên công nghệ sử dụng
   icon: string;    // Đường dẫn đến biểu tượng
 }
 
-/**
- * Thông tin đầy đủ về dự án
- * Dùng trong trang dự án và thẻ dự án
- */
 export interface Project {
   title: string;           // Tiêu đề dự án
   description: string;     // Mô tả dự án
@@ -21,33 +13,16 @@ export interface Project {
   image: string;           // Đường dẫn ảnh preview dự án
 }
 
-
-/**
- * Kỹ năng cá nhân
- * Dùng trong phần kỹ năng
- */
 export interface Skill {
-  name: string;    // Tên kỹ năng (ví dụ: "HTML", "JavaScript")
+  name: string;    // Tên kỹ năng  
   logo: string;    // Đường dẫn logo (PNG)
 }
 
-/**
- * Danh mục kỹ năng chứa nhiều kỹ năng
- * Dùng để nhóm kỹ năng theo loại (Frontend, Backend, v.v.)
- */
 export interface SkillCategory {
   title: string;   // Tiêu đề danh mục (ví dụ: "Frontend", "Backend")
   skills: Skill[]; // Danh sách kỹ năng trong danh mục này
 }
 
-// ========================================
-// CÁC LOẠI DỮ LIỆU KINH NGHIỆM
-// ========================================
-
-/**
- * Mục kinh nghiệm làm việc
- * Dùng trong trang kinh nghiệm và timeline
- */
 export interface ExperienceType {
   id: number;              // ID duy nhất
   img: string;             // Đường dẫn logo công ty (PNG)
@@ -59,23 +34,17 @@ export interface ExperienceType {
 }
 
 
-
-
 export interface PersonalInfo {
   name: string;        // Họ và tên
-  role: string;        // Vai trò/chức vụ hiện tại
+  role: string;        // Vai trò hiện tại
   location: string;    // Vị trí hiện tại
   email: string;       // Email liên hệ
 }
 
-/**
- * Cấu trúc dữ liệu trang giới thiệu
- * Dùng trong trang about
- */
 export interface AboutData {
   title: string;           // Tiêu đề trang
   description: string;     // Mô tả chính
-  image?: string;          // Ảnh cá nhân (tùy chọn)
+  image?: string;          // Ảnh cá nhân (optional)
   personalInfo: PersonalInfo;  // Thông tin cá nhân
   bio: string[];           // Các đoạn tiểu sử
   achievements: string[];  // Danh sách thành tựu

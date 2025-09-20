@@ -1,5 +1,5 @@
 
-// Import types
+// Import các types
 import { SkillCategory, ExperienceType } from '../types';
 
 export const SkillsInfoByLocale: Record<'vi' | 'en', SkillCategory[]> = {

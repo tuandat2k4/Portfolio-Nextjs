@@ -13,13 +13,13 @@ export default function Navbar() {
   const pathname = usePathname()
   const router = useRouter()
   const setLocale = async (value: 'vi' | 'en') => {
-    // Show loading state
+    // Hiển thị trạng thái loading
     setIsMobileMenuOpen(false);
     
-    // Set cookie
+    // Đặt cookie
     document.cookie = `locale=${value}; path=/; max-age=31536000; SameSite=Lax`;
     
-    // Smooth reload with a small delay
+    // Reload mượt mà với delay nhỏ
     setTimeout(() => {
       window.location.reload();
     }, 100);
@@ -47,7 +47,7 @@ export default function Navbar() {
             Portfolio
           </Link>
           
-          {/* Desktop Menu */}
+          {/* Menu Desktop */}
           <div className="hidden md:flex items-center space-x-8 ">
             {menuItems.map((item) => (
               <Link 
@@ -76,7 +76,7 @@ export default function Navbar() {
             </motion.button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Nút Menu Mobile */}
           <motion.button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             onClick={toggleMobileMenu}
@@ -91,7 +91,7 @@ export default function Navbar() {
           </motion.button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Menu Mobile */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
