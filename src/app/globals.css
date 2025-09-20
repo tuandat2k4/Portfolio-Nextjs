@@ -3,23 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #007AFF;
-
-  --font-sans: 'Roboto', sans-serif;
-
+  --color-primary: #007aff;
+  --font-sans: "Roboto", sans-serif;
 }
 
 @layer base {
   .dark {
-    --color-primary: #007AFF;
+    --color-primary: #007aff;
   }
 }
 
 a {
   transition: all 0.2s ease;
 }
-
-
 
 body {
   font-family: var(--font-sans), sans-serif;

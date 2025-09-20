@@ -112,15 +112,17 @@ export default function Contact() {
               <FormField label={t('message')} type="textarea" name="message" value={formData.message} onChange={handleChange} required />
             </motion.div>
 
-            <motion.button
-              type="submit"
-              disabled={status === 'loading'}
-              className="w-full btn btn-primary"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              {status === 'loading' ? t('sending') : t('send')}
-            </motion.button>
+            <div className="flex justify-center">
+              <motion.button
+                type="submit"
+                disabled={status === 'loading'}
+                className="bg-primary text-white dark:text-white font-medium text-center px-6 py-2 rounded-lg hover:bg-primary/80 dark:hover:bg-primary/80 transition-colors disabled:opacity-50"
+                whileHover={{ scale: 1.005 }}
+                whileTap={{ scale: 0.995 }}
+              >
+                {status === 'loading' ? t('sending') : t('send')}
+              </motion.button>
+            </div>
 
             {status === 'success' && (
               <motion.p className="text-green-500 text-center" {...fadeInUp}>
