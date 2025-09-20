@@ -1,6 +1,5 @@
 "use client";
 import { SkillsInfoByLocale } from "@/contents/skillsInfo";
-import { SkillCategory } from "@/types";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 import { motion } from "framer-motion";
