@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslations, useLocale } from 'next-intl';
 import Image from "next/image";
 import { experiencesByLocale } from "@/contents/skillsInfo";
@@ -90,7 +89,7 @@ const Experience = () => {
                 <ul className="flex flex-wrap mt-2">
                   {experience.skills.map((skill: string, index: number) => (
                     <li
-                      key={index}
+                      key={skill}
                       className="bg-primary/10 px-3 py-1 text-xs sm:text-sm rounded-full mr-2 mb-2"
                     >
                       <Image 

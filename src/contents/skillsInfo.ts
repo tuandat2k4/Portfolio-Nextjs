@@ -151,7 +151,7 @@ export const experiencesByLocale: Record<'vi' | 'en', ExperienceType[]> = {
         "Next Js",
         "Tailwind CSS",
         "MongoDb",
-        "Express JS",
+        "Express",
       ],
     },
     {
@@ -209,7 +209,7 @@ export const experiencesByLocale: Record<'vi' | 'en', ExperienceType[]> = {
         "Next Js",
         "Tailwind CSS",
         "MongoDb",
-        "Express JS",
+        "Express",
       ],
     },
     {

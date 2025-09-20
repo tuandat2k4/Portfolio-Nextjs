@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { SkillsInfoByLocale } from "@/contents/skillsInfo";
 import { SkillCategory } from "@/types";
 import Tilt from "react-parallax-tilt";

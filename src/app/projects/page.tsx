@@ -7,8 +7,9 @@ import { motion } from "framer-motion";
 import {
   fadeInUp,
   staggerContainer,
-  cardHoverSmall,
   fadeIn,
+  cardHover,
+  linkHover,
 } from "@/utils/animations";
 import { useTranslations, useLocale } from 'next-intl';
 
@@ -79,8 +80,7 @@ const Projects = () => {
                   <motion.div
                     key={tech.name}
                     className="flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
+                    {...cardHover}
                   >
                     <Image
                       src={tech.icon}
@@ -104,7 +104,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-                  whileHover={{ x: 5 }}
+                  {...linkHover}
                   whileTap={{ scale: 0.95 }}
                 >
                   <FaGithub className="h-5 w-5" />
@@ -116,7 +116,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-                  whileHover={{ x: 5 }}
+                  {...linkHover}
                   whileTap={{ scale: 0.95 }}
                 >
                   <FaExternalLinkAlt className="h-5 w-5" />

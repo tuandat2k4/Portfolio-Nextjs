@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import Image from 'next/image'
 import { aboutDataByLocale } from '@/contents/aboutData'
 import { AboutData } from '@/types'
@@ -75,7 +74,7 @@ const About = () => {
             <motion.div className="space-y-4" {...fadeInUp}>
               {aboutData.bio.map((paragraph, index) => (
                 <p 
-                  key={index}
+                  key={paragraph}
                   className="text-gray-600 dark:text-gray-300 leading-relaxed"
                 >
                   {paragraph}
@@ -91,7 +90,7 @@ const About = () => {
               <ul className="space-y-2">
                 {aboutData.achievements.map((achievement, index) => (
                   <li 
-                    key={index}
+                    key={achievement}
                     className="flex items-center text-gray-600 dark:text-gray-300"
                   >
                     <span className="text-green-500 mr-2">✓</span>

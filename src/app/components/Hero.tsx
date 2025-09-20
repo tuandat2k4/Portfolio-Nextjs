@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { fadeInUp, fadeIn, scaleIn } from "@/utils/animations";
+import { fadeInUp, fadeIn, scaleIn, buttonHover } from "@/utils/animations";
 import { useTranslations } from "next-intl";
 
 export default function Hero() {
@@ -23,7 +23,7 @@ export default function Hero() {
               alt="Profile"
               width={100}
               height={100}
-              className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary"
+              className="rounded-full mb-4 w-32 h-32 object-cover"
             />
           </motion.div>
           <motion.h1
@@ -88,7 +88,7 @@ export default function Hero() {
             {...fadeInUp}
             transition={{ delay: 0.6 }}
           >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div {...buttonHover}>
               <Link
                 href="/projects"
                 className="bg-primary inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
@@ -96,7 +96,7 @@ export default function Hero() {
                 {t('viewProjects')}
               </Link>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div {...buttonHover}>
               <Link
                 href="/contact"
                 className=" inline-block w-full bg-gray-500  md:w-auto text-white dark:text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
