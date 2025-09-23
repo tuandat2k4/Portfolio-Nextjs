@@ -5,13 +5,11 @@ import { useTheme } from '../context/ThemeContext'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import {useTranslations, useLocale} from 'next-intl'
-import {usePathname, useRouter} from 'next/navigation'
 
-export default function Navbar() {
+export default function Navbar(){
   const t = useTranslations('navbar')
   const locale = useLocale()
-  const pathname = usePathname()
-  const router = useRouter()
+  ////////////////////
   const setLocale = async (value: 'vi' | 'en') => {
     // Hiển thị trạng thái loading
     setIsMobileMenuOpen(false);
@@ -19,7 +17,7 @@ export default function Navbar() {
     // Đặt cookie
     document.cookie = `locale=${value}; path=/; max-age=31536000; SameSite=Lax`;
     
-    // Reload mượt mà với delay nhỏ
+    //Delay tí
     setTimeout(() => {
       window.location.reload();
     }, 100);

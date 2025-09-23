@@ -23,18 +23,18 @@ const Experience = () => {
       {/* Timeline Kinh nghiệm */}
       <div className="relative">
         {/* Đường thẳng dọc */}
-        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-black dark:bg-white h-full"></div>
+        <div className="absolute left-4 md:left-1/2 transform translate-x-0 md:-translate-x-1/2 w-1 bg-black dark:bg-white h-full z-0"></div>
 
         {/* Các mục Kinh nghiệm */}
         {experiences.map((experience, index) => (
           <div
             key={experience.id}
-            className={`flex flex-col sm:flex-row items-center mb-16 ${
-              index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
+            className={`flex flex-col md:flex-row items-center mb-16 ${
+              index % 2 === 0 ? "md:justify-end" : "md:justify-start"
             }`}
           >
             {/* Vòng tròn Timeline */}
-            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-white dark:bg-gray-800 border-4 border-primary w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
+            <div className="hidden md:flex absolute left-6 md:left-1/2 transform translate-x-0 md:-translate-x-1/2 bg-white dark:bg-gray-800 border-4 border-primary w-12 h-12 md:w-16 md:h-16 rounded-full justify-center items-center z-10">
               <Image
                 src={experience.img}
                 alt={experience.company}
@@ -46,9 +46,9 @@ const Experience = () => {
 
             {/* Phần Nội dung */}
             <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl border border-white bg-white dark:bg-gray-900 backdrop-blur-md shadow-xl shadow-primary/20 ${
-                index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
-              } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
+              className={`w-full md:max-w-md p-4 md:p-8 rounded-2xl border border-white bg-white dark:bg-gray-900 backdrop-blur-md shadow-xl shadow-primary/20 relative z-10 ${
+                index % 2 === 0 ? "md:ml-0" : "md:mr-0"
+              } md:ml-44 md:mr-44 ml-16 transform transition-transform duration-300 hover:scale-105`}
             >
               {/* Container flex cho ảnh và text */}
               <div className="flex items-center space-x-6">

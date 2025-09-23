@@ -12,8 +12,11 @@ import {
 import { useTranslations, useLocale } from "next-intl";
 
 const Skills = () => {
+  // Hook để lấy translations từ namespace "skills"
   const t = useTranslations("skills");
+  // Hook để lấy locale hiện tại (vi hoặc en)
   const locale = useLocale() as "vi" | "en";
+  // Lấy data skills theo locale từ file skillsInfo.ts
   const SkillsInfo = SkillsInfoByLocale[locale];
   return (
     <section
