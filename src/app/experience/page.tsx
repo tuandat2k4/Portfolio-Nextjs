@@ -34,7 +34,7 @@ const Experience = () => {
             }`}
           >
             {/* Vòng tròn Timeline */}
-            <div className="hidden md:flex absolute left-6 md:left-1/2 transform translate-x-0 md:-translate-x-1/2 bg-white dark:bg-gray-800 border-4 border-primary w-12 h-12 md:w-16 md:h-16 rounded-full justify-center items-center z-10">
+            <div className="hidden md:flex absolute left-6 md:left-1/2 transform translate-x-0 md:-translate-x-1/2 bg-white dark:bg-gray-800 border-4 border-primary w-12 h-12 md:w-16 md:h-16 rounded-full justify-center items-center z-20">
               <Image
                 src={experience.img}
                 alt={experience.company}
