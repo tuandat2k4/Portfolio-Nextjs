@@ -103,8 +103,8 @@ export const projectsByLocale: Record<'vi' | 'en', Project[]> = {
         { name: "TypeScript", icon: "/tech_logo/typescript.png" },
         { name: "Tailwind CSS", icon: "/tech_logo/tailwindcss.png" },
       ],
-      githubLink: "https://github.com",
-      demoLink: "https://demo.com",
+      githubLink: "https://github.com/tuandat2k4/e-commerce-nextjs",
+      demoLink: "https://quan-ly-kho.netlify.app/",
       image: "/projects/e-commerce-website.png",
     },
     {
@@ -128,8 +128,8 @@ export const projectsByLocale: Record<'vi' | 'en', Project[]> = {
         { name: "Tailwind CSS", icon: "/tech_logo/tailwindcss.png" },
         { name: "Framer Motion", icon: "/icons/framermotion.svg" },
       ],
-      githubLink: "https://github.com",
-      demoLink: "https://demo.com",
+      githubLink: "https://github.com/tuandat2k4/Portfolio-Nextjs",
+      demoLink: "https://my-portfolio-datt.vercel.app/",
       image: "/projects/portfolio-website.jpg",
     },
     {
